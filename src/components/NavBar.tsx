@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Menu, Button } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 export interface INavBarProps {}
@@ -17,11 +17,14 @@ export default class NavBar extends React.Component<INavBarProps> {
         </Menu.Item>
 
         <Menu.Item as={Link} to={`/newsfeed`} name="newsfeed">
-          Newsfeed
+          newsfeed
         </Menu.Item>
 
         <Menu.Item as={Link} to={`/profile`} name="profile">
           Profile
+        </Menu.Item>
+        <Menu.Item as={Link} to={`/LogOut`} name="LogOut">
+          Logout
         </Menu.Item>
       </Menu>
     );

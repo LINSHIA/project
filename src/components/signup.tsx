@@ -1,23 +1,11 @@
-import React, { Component } from "react";
-import Button from "./Button";
-import NewsFeed from "./newsfeed";
-import Profile from "./profile";
+import React from "react";
 export interface ISignUpProps {}
-
-class App extends Component {
-  state = {
-    isSignUP: true,
-  };
-
+export default class SignUp extends React.Component {
   render() {
     return (
-      <div className="App">
-        <Button label={"SignUp"} />
-        <h2>Signup my page!!</h2>
-        {this.state.isSignUP ? <NewsFeed /> && <Profile /> : null}
-      </div>
+      <article>
+        <p>Welcome to the Sign Up!</p>
+      </article>
     );
   }
 }
-
-export default App;
