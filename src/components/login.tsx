@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-import Button from "./Button";
+import { Route } from "react-router-dom";
+
 import NewsFeed from "./newsfeed";
 import Profile from "./profile";
 
@@ -12,8 +13,30 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Button label={"Login"} />
-        <Button label={"SignUp"} />
+        <Route
+          render={({ history }) => (
+            <button
+              type="button"
+              onClick={() => {
+                history.push("./newsfeed");
+              }}
+            >
+              LogIn
+            </button>
+          )}
+        />
+        <Route
+          render={({ history }) => (
+            <button
+              type="button"
+              onClick={() => {
+                history.push("./profile");
+              }}
+            >
+              SignUp
+            </button>
+          )}
+        />
         {this.state.isLoggedIn ? <NewsFeed /> && <Profile /> : null}
       </div>
     );

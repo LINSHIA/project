@@ -11,12 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  size: 10px;
-}
+
 ul {
   float: right;
   list-style-type: none;
@@ -28,5 +23,8 @@ ul li {
   padding: 10px;
 }
 body {
-  background-color: thistle;
+  background-image: url("./components/home.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
