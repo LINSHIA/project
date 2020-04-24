@@ -27,3 +27,6 @@ ul li {
   height: 100px;
   padding: 10px;
 }
+body {
+  background-color: thistle;
+}

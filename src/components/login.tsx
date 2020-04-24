@@ -1,12 +1,23 @@
-import React from "react";
-export interface ILoginProps {}
-export default class Login extends React.Component {
-  public render() {
+import React, { Component } from "react";
+
+import Button from "./Button";
+import NewsFeed from "./newsfeed";
+import Profile from "./profile";
+
+class App extends Component {
+  state = {
+    isLoggedIn: true,
+  };
+
+  render() {
     return (
-      <article>
-        <h2>Login</h2>
-        <p>Welcome to the Login Page</p>
-      </article>
+      <div className="App">
+        <Button label={"Login"} />
+        <Button label={"SignUp"} />
+        {this.state.isLoggedIn ? <NewsFeed /> && <Profile /> : null}
+      </div>
     );
   }
 }
+
+export default App;
